@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>No te lo pierdas</title>
+
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,700,0,200" />
+</head>
+<body>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="loading-spin"></div>
+    </div>
+
+    <div id="background-before-continue-form" class="hidden">
+        <form id="before-continue">
+
+            <a style="color: #d7063e;" onclick="this.parentElement.parentElement.classList.add('hidden')" id="before-continue-close-button" type="button">
+                <span class="material-symbols-rounded">close</span>
+            </a>
+
+            <h3>Antes de continuar</h3>
+            <p>Necesitamos algunos datos para que estemos en contacto :).</p>
+            
+            <input type="text" name="user-name" maxlength="150" placeholder="Tu nombre completo (Opcional)" autocomplete="name">
+            <input type="email" name="user-email" maxlength="255" placeholder="Correo electrónico*" autocomplete="email" required>
+            <input type="text" name="user-address" maxlength="255" placeholder="Dirección de envío*" autocomplete="street-address" required>
+
+            <select name="user-city" required title="Seleccione su ciudad">
+                <option value="" selected style="color: gray;">Seleccione su ciudad</option>
+                <option value="Medellín">Medellín</option>
+                <option value="Sabaneta">Sabaneta</option>
+                <option value="Envigado">Envigado</option>
+            </select>
+
+            <h3>Dibujo que vas a estampar</h3>
+
+            <img id="before-continue-draw-image" src="" alt="_new">
+
+            <input type="submit" value="Pasar a pagar">
+        </form>
+    </div>
+
+    <div id="drag-overlay" class="hidden">
+        <span>Soltar imagen aquí</span>
+    </div>
+
+    <div class="container1">
+        <h3>¡Solamente por el mes del padre!</h3>
+
+        <p>
+            Plasma un bello recuerdo para sorprender a <strong>papá</strong>.
+        </p>
+        
+        <p style="text-align: center;">
+            <strong>Camiseta</strong> + <strong>taza</strong>
+        </p>
+    </div>
+
+
+
+    <img id="sample-image" src="cup, shirt & draw.webp" alt="Productos">
+
+    <div class="container1">
+        <label tabindex="0" for="image-input" id="upload-image">SUBIR DIBUJO</label>
+        <button tabindex="0" type="button" id="purchase-button">¡COMPRAR AHORA!</button>
+    </div>
+
+    <div id="social-media">
+        <a href="https://www.instagram.com/santa_store0529/">
+            <img src="instagram.svg" alt="Instagram icon">
+        </a>
+
+        <a href="https://wa.link/wvh81h" style="margin-left: 10px;">
+            <img src="whatsapp.svg" alt="WhatsApp icon">
+        </a>
+    </div>
+
+    <input type="file" accept="image/*" id="image-input">
+
+    <script src="encryption.js"></script>
+    <script src="activity.js"></script>
+</body>
+</html>
